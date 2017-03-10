@@ -1,0 +1,32 @@
+::root
+  font-size: 16px
+
+*, *::after, *::before
+  box-sizing: border-box
+
+body
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+body,
+.overlay
+  background: #262626
+
+.container
+	display: flex
+	flex-direction: column
+	justify-content: space-around
+	height: 100vh
+	min-height: 420px
+	@media(min-width: 1024px)
+		min-height: 535px
+		padding: .5em
+
+.hidden
+  display: none
+
+.time-btns-holder,
+.countdown-start,
+.countdown-stop,
+.time-btn
+  transition: all .3s

@@ -1,0 +1,32 @@
+.time-setters
+	display: flex
+	flex-direction: row
+	justify-content: space-around
+	text-align: center
+	z-index: 2
+	@media(min-width: 600px)
+		width: 600px
+		margin: 0 auto
+	h2
+		margin-top: 0
+		margin-bottom: .25em
+	.time-btns-holder
+		display: flex
+		justify-content: space-between
+		width: 138px
+		@media(min-width: 340px)
+			width: 145px
+		@media(min-width: 355px)
+			width: 149px
+		#study-time,
+		#break-time,
+		.time-btn
+			display: inline-block
+		.time-btn
+			width: 40px
+			height: 40px
+			cursor: pointer
+		#study-time,
+		#break-time
+			width: 42px
+			height: 37px

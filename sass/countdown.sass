@@ -1,0 +1,79 @@
+.countdown
+  position: relative
+  width: 308px
+  height: 308px
+  margin: 1em auto 0
+  text-align: center
+  z-index: 2
+  .countdown-info
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    height: 100%
+    p
+      margin: 0
+    div
+      height: 54px
+      margin-bottom: 1.5em
+      p
+        position: absolute
+        left: 0
+        right: 0
+        margin: 0
+    .countdown-number
+      margin-top: 1.185em
+    .countdown-stop
+      opacity: 0
+  svg
+    position: absolute
+    width: 308px
+    height: 308px
+    top: 0
+    right: 0
+    border-radius: 50%
+    box-shadow: 0px 0px 35px 5px rgb(0, 0, 0)
+    transform: rotateY(-180deg) rotateZ(-90deg)
+    circle
+      stroke-dasharray: 905px
+      stroke-dashoffset: 0
+      stroke-linecap: round
+      stroke-width: 17px
+      stroke: #0a0ad6
+      fill: transparent
+      cursor: pointer
+      transition: all .4s
+  .inner-time-circ
+    position: absolute
+    top: 17px
+    left: 17px
+    width: 274px
+    height: 274px
+    border-radius: 50%
+    box-shadow: -1px 0px 50px 3px rgb(0, 0, 0) inset
+
+
+.counting
+	animation: countReset .4s linear forwards, count .4s linear forwards
+
+
+@keyframes count
+  0%
+    stroke-dashoffset: 0
+    stroke: #0a0ad6
+  98%
+    opacity: 1
+  100%
+    stroke-dashoffset: 905px
+    stroke: #de0b0b
+    opacity: 0
+
+@keyframes countReset
+  0%
+    stroke-dashoffset: 905px
+    stroke: #de0b0b
+    opacity: 0
+  2%
+    opacity: 1
+  100%
+    stroke-dashoffset: 0
+    stroke: #0a0ad6

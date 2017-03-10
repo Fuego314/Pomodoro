@@ -1,0 +1,37 @@
+.overlay
+  position: absolute
+  display: flex
+  @media(min-width: 1024px)
+    position: relative
+    padding: 0
+    animation: none
+  h1
+    position: relative
+    margin: auto
+    opacity: 0
+    transform: scale(0)
+    @media(min-width: 1024px)
+      opacity: 1
+      transform: scale(1)
+
+.overlay-ani
+  @media(max-width: 1024px)
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    padding: 1em
+    z-index: 4
+    animation: fadeOut .8s 2.1s forwards
+.header-ani
+  @media(max-width: 1024px)
+    animation: fadeInScale .6s .1s ease-in forwards
+
+@keyframes fadeInScale
+  100%
+    transform: scale(1)
+    opacity: 1
+
+@keyframes fadeOut
+  100%
+    opacity: 0
